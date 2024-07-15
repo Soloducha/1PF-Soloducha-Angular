@@ -1,0 +1,12 @@
+.full-width {
+    width: 100%;
+}
+
+.estudiante-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.dialog-actions {
+    justify-content: space-between;
+}

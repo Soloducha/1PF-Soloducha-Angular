@@ -1,0 +1,35 @@
+.menu-container {
+    width: 100%;
+    height: 100vh;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.menu-sidenav-content {
+    display: flex;
+    height: 100%;
+    // align-items: center;
+    // justify-content: center;
+}
+
+.menu-sidenav {
+    padding: 20px;
+    width: 200px;
+}
+
+// .toolbar-spacer {
+//     flex: 1 1 auto;
+// }
+
+.main-content {
+    display: block;
+    padding: 30px;
+}
+
+.toolbar {
+    position: fixed;
+    height: 40px;
+    display: block;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+}
