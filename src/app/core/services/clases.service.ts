@@ -72,7 +72,7 @@ export class ClasesService {
 
   agregarClase(nuevaClase: Clases): Observable<Clases[]> {
     this.MY_DATABASE.push(nuevaClase);
-    console.log(nuevaClase);
+
     return this.obtenerClases();
   }
 

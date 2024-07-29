@@ -32,14 +32,8 @@ export class ClasesDialogComponent implements OnInit {
 
   ngOnInit(): void {
     this.listaEstudiantes = this.estudianteService.obtenerEstudiantes();
-    console.log(this.estudianteService.obtenerEstudiantes());
   }
 
-  // onSaveClick(): void {
-  //   if (this.claseForm.valid) {
-  //     this.dialogRef.close(this.claseForm.value);
-  //   }
-  // }
 
   onSubmit() {
     if (this.claseForm.valid) {

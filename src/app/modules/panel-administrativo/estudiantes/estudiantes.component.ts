@@ -46,8 +46,6 @@ openDialog():void {
   .afterClosed()
   .subscribe({
     next:(value) => { 
-      
-    console.log(value)
     this.dataSource=[...this.dataSource, value];
   },})
 }
@@ -68,10 +66,8 @@ BorrarEstudianteXDNI(DNI:number){
 }
 
 EditarEstudiante(estudianteAEditar: Estudiante){
-  console.log(estudianteAEditar)
   this.matDialog.open(EstudiantesDialogComponent, { data: estudianteAEditar }).afterClosed().subscribe({
     next:(value) => { 
-      console.log(value)
       if(!!value){
         this.estudiantesService.editarEstudianteXDNI(estudianteAEditar.DNI, value).subscribe({
           next:(estudiantes) => {this.dataSource=[...estudiantes];},
