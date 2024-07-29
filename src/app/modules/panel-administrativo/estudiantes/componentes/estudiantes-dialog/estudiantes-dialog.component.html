@@ -1,12 +1,12 @@
-<h2 mat-dialog-title>Dar de Alta Estudiante</h2>
+<h2 mat-dialog-title>{{ estudianteAEditar ? "Editando Estudiante: " + estudianteAEditar.Apellido + " " + estudianteAEditar.Nombre : "Dar de Alta estudiante" }}</h2>
 <mat-dialog-content>
-    <form [formGroup]="EstudianteForm" class="estudiante-form">
+    <form [formGroup]="estudianteForm" class="estudiante-form">
         <span></span> <!-- espacio  -->
         <mat-form-field class="full-width" appearance="outline">
             <mat-label>DNI</mat-label>
             <input matInput placeholder="DNI" type="number" formControlName="DNI" maxlength="8" minlength="8">
-            <mat-error *ngIf="EstudianteForm.get('DNI')?.hasError('required') && EstudianteForm.get('DNI')?.touched">DNI es requerido</mat-error>
-            <mat-error *ngIf="(EstudianteForm.get('DNI')?.hasError('minlength') || EstudianteForm.get('DNI')?.hasError('maxlength')) && EstudianteForm.get('DNI')?.touched">DNI debe tener 8 dígitos</mat-error>
+            <mat-error *ngIf="estudianteForm.get('DNI')?.hasError('required') && estudianteForm.get('DNI')?.touched">DNI es requerido</mat-error>
+            <mat-error *ngIf="(estudianteForm.get('DNI')?.hasError('minlength') || estudianteForm.get('DNI')?.hasError('maxlength')) && estudianteForm.get('DNI')?.touched">DNI debe tener 8 dígitos</mat-error>
         </mat-form-field>
 
         <mat-form-field class="full-width" appearance="outline">

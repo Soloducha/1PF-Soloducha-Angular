@@ -13,7 +13,7 @@ import { MatInputModule } from '@angular/material/input';
 import { NombreCompletoPipe } from './shared/pipes/nombre-completo.pipe';
 import { TamanioFuenteDirective } from './shared/directives/tamanio-fuente.directive';
 import { FondoDirective } from './shared/directives/fondo.directive';
-
+import { MatProgressSpinner } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,8 @@ import { FondoDirective } from './shared/directives/fondo.directive';
     EstudiantesDialogComponent,
     NombreCompletoPipe,
     TamanioFuenteDirective,
-    FondoDirective
+    FondoDirective,
+
   ],
   imports: [
     CommonModule,
@@ -32,7 +33,8 @@ import { FondoDirective } from './shared/directives/fondo.directive';
     MatFormFieldModule,
     ReactiveFormsModule,
     MatTableModule,
-    MatInputModule  
+    MatInputModule,
+    MatProgressSpinner
   ],
   exports: [
     EstudiantesComponent

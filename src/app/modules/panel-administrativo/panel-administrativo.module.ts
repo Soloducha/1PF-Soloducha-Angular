@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { PanelAdministrativoRoutingModule } from './panel-administrativo-routing.module';
 import { PanelAdministrativoComponent } from './panel-administrativo.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -11,11 +10,15 @@ import { MatCardModule } from '@angular/material/card';
 import { AutentificacionModule } from "../autentificacion/autentificacion.module";
 import { EstudiantesModule } from './estudiantes/estudiantes.module';
 import { MatListModule } from '@angular/material/list';
+import { ClasesModule } from './clases/clases.module';
+import { CursosModule } from './cursos/cursos.module';
+import { InicioComponent } from './inicio/inicio.component';
 
 
 @NgModule({
   declarations: [
-    PanelAdministrativoComponent
+    PanelAdministrativoComponent,
+    InicioComponent
   ],
   imports: [
     CommonModule,
@@ -27,7 +30,9 @@ import { MatListModule } from '@angular/material/list';
     MatCardModule,
     AutentificacionModule,
     EstudiantesModule,
-    MatListModule
+    MatListModule,
+    ClasesModule,
+    CursosModule,
 ],
   exports: [
     PanelAdministrativoComponent

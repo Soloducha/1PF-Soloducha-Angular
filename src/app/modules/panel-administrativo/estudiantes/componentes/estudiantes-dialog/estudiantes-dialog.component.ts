@@ -10,43 +10,33 @@ import { Estudiante } from '../../models';
   styleUrls: ['./estudiantes-dialog.component.scss']
 })
 export class EstudiantesDialogComponent {
-  EstudianteForm: FormGroup;
+  estudianteForm: FormGroup;
 
   hasError(controlName: string, errorName: string): boolean {
-    return this.EstudianteForm.controls[controlName].hasError(errorName);
+    return this.estudianteForm.controls[controlName].hasError(errorName);
   }
 
   constructor(
     private fb: FormBuilder,
     private matDialogRef: MatDialogRef<EstudiantesDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) private EstudianteAEditar?: Estudiante  
+    @Inject(MAT_DIALOG_DATA) public estudianteAEditar?: Estudiante  
   ) {
-    this.EstudianteForm = this.fb.group({
+    this.estudianteForm = this.fb.group({
       DNI: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(8)]],
       Nombre: ['', Validators.required],
       Apellido: ['', Validators.required],
       Telefono: ['', Validators.required]
     });
 
-    if (this.EstudianteAEditar) {
-      this.EstudianteForm.patchValue(this.EstudianteAEditar);
+    if (this.estudianteAEditar) {
+      this.estudianteForm.patchValue(this.estudianteAEditar);
     }
   }
 
-  ngOnInit() { 
-    this.EstudianteForm = this.fb.group({
-      DNI: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(8)]],
-      Nombre: ['', Validators.required],
-      Apellido: ['', Validators.required],
-      Telefono: ['', Validators.required]
-    });
-  }
-
- 
 
   onSubmit() {
-    if (this.EstudianteForm.valid) {
-      this.matDialogRef.close(this.EstudianteForm.value);
+    if (this.estudianteForm.valid) {
+      this.matDialogRef.close(this.estudianteForm.value);
     }
   }
 }

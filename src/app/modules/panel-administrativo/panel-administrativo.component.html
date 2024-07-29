@@ -1,28 +1,29 @@
 <!-- MENU INICIO -->
 <mat-drawer-container class="menu-container" autosize>
-    <mat-drawer #drawer class="menu-sidenav" mode="side">
+    <mat-drawer [opened]="true" #drawer class="menu-sidenav" mode="side">
         <p>Menu</p>
         <mat-nav-list>
-            <a mat-list-item href="...">Cursos</a>
-            <a mat-list-item href="...">Estudiantes</a>
-            <a mat-list-item href="...">Clases</a>
+            <a mat-list-item routerLink="Inicio" routerLinkActive #inicioLink="routerLinkActive" [activated]="inicioLink.isActive">Inicio</a>
+            <a mat-list-item routerLink="Cursos" routerLinkActive #cursosLink="routerLinkActive" [activated]="cursosLink.isActive">Cursos</a>
+            <a mat-list-item routerLink="Estudiantes" routerLinkActive #estudiantesLink="routerLinkActive" [activated]="estudiantesLink.isActive">Estudiantes</a>
+            <a mat-list-item routerLink="Clases" routerLinkActive #clasesLink="routerLinkActive" [activated]="clasesLink.isActive">Clases</a>
         </mat-nav-list>
     </mat-drawer>
     <!-- MENU FIN -->
     <div class="menu-sidenav-content"> 
         <!-- TOOLBAR INICIO -->
         <mat-toolbar class="toolbar">
-
             <button (click)="drawer.toggle()" mat-icon-button class="toolbar-icon" aria-label="toolbar icon-button with menu icon">
             <mat-icon>menu</mat-icon>
             </button>
             <span>Le Escuelita</span>
-            <div style="padding: 10px;">
-                <app-estudiantes/>
-            </div>
+            <span class="example-spacer"></span>
         </mat-toolbar>
         <!-- TOOLBAR FIN -->
-        
+        <main style="padding-top: 50px;">
+            <!-- <app-estudiantes/> -->
+            <router-outlet />
+        </main>
     </div>
 </mat-drawer-container>
 
