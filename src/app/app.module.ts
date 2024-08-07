@@ -10,6 +10,7 @@ import { ClasesModule } from './modules/panel-administrativo/clases/clases.modul
 import { CoreModule } from './core/core.module';
 import { CursosModule } from './modules/panel-administrativo/cursos/cursos.module';
 import { provideNativeDateAdapter } from '@angular/material/core';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,9 +24,10 @@ import { provideNativeDateAdapter } from '@angular/material/core';
     CoreModule,
     ClasesModule,
     CursosModule,
+
   ],
   providers: [
-    provideAnimationsAsync(), provideNativeDateAdapter()
+    provideAnimationsAsync(), provideNativeDateAdapter(), provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]
 })

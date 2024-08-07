@@ -1,17 +1,17 @@
 <div class="logueo">
 <mat-card class="login-card">
     <mat-card-header>
-        <mat-card-title class="login-title">Logueate</mat-card-title>
+        <mat-card-title class="login-title">Inicia Sesion</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-        <form class="login-form">            
-            <mat-form-field style="padding-right: 10px;" appearance="outline">
-                <mat-label>Email</mat-label>
-                <input matInput placeholder="Email" type="text">
-                <mat-icon matSuffix>email</mat-icon>
-                <mat-hint>Ingresa tu email</mat-hint>
+        <form (ngSubmit)="onSubmit()" [formGroup]="loginForm" class="login-form">            
+            <mat-form-field style="padding-right: 10px; width: 100%;">
+                <mat-label>Legajo</mat-label>
+                <input matInput placeholder="legajo" type="text">
+                <mat-icon matSuffix>legajo</mat-icon>
+                <mat-hint>Ingresa tu legajo</mat-hint>
             </mat-form-field>
-            <mat-form-field appearance="outline">
+            <mat-form-field style="padding-right: 10px; width: 100%;">
                 <mat-label>Contraseña</mat-label>
                 <input matInput placeholder="Contraseña" type="password">
                 <mat-icon matSuffix>lock</mat-icon>

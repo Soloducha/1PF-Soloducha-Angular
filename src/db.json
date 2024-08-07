@@ -1,0 +1,22 @@
+{
+    "usuarios": [
+    {
+        "legajo": "LE000001",
+        "nombre": "Leandro",
+        "apellido": "Gonzales",
+        "email": "Lgonzales@mail.com",
+        "password": "123456",
+        "token": "TOKEN",
+        "tipo": "ADMIN"
+    },
+    {
+        "legajo": "LE000002",
+        "nombre": "Ezequiel",
+        "apellido": "Martinez",
+        "email": "emartinez@mail.com",
+        "password": "123456",
+        "token": "jPUb2KQryblCvVLvsY1L9vcGsSRzkfJBxWbzxQJldF3xqCIHgaT0GHs0O1zj8RC7",
+        "tipo": "EMPLOYEE"
+    }
+    ]
+}
